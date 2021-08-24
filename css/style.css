@@ -1,0 +1,904 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style-type: none
+}
+
+img,
+fieldset {
+    border: none;
+    vertical-align: middle
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+input,
+textarea {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    vertical-align: middle
+}
+
+/* =====reset===== */
+.f-pop {
+    z-index: 9999;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.822);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.f-pop>div {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background: rgb(92, 86, 86);
+    width: 400px;
+    height: 250px;
+}
+
+.f-popbtn {
+    cursor: pointer;
+    z-index: 100;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background: rgb(109, 32, 153);
+    width: 65px;
+    height: 35px;
+}
+
+.f-pop p {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.f-pop span {
+    line-height: 23px;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+#wrap {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.smallbar {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: rgb(123, 78, 207);
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+
+
+/*********************header****************************/
+#scroll {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+#header {
+    width: 100%;
+}
+
+#header .top {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(48, 33, 33);
+    font-size: 13px;
+    margin-bottom: 1px;
+    line-height: 30px;
+}
+
+#header .top a {
+    color: white;
+}
+
+#header .top p {
+    float: left;
+    color: white;
+}
+
+#header .top p span {
+    font-weight: bold;
+}
+
+#header .top ul {
+    float: right;
+}
+
+#header .top ul li {
+    float: left;
+
+
+}
+
+#header .top ul li a {
+    border-right: 1px solid white;
+    padding: 0 10px;
+}
+
+#header .top ul li:last-child a {
+    color: yellow;
+    border-right: 0;
+}
+
+/* slide */
+.bx-wrapper {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0px;
+    height: 0px;
+    padding-bottom: 20%;
+    overflow: hidden;
+    margin-bottom: 0px;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    *zoom: 1;
+    position: relative;
+}
+
+.bx-controls-direction {
+    position: relative;
+}
+
+.bx-controls-direction .bx-prev {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(195px, -150px);
+}
+
+.bx-controls-direction .bx-next {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(-195px, -150px);
+}
+
+.bx-pager {
+    transform: translateY(-50px);
+}
+
+/*********************nav****************************/
+
+nav {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+nav .mainmenu {
+    width: 1200px;
+    height: 100%;
+    line-height: 50px;
+}
+
+nav .mainmenu>li {
+    float: left;
+    text-align: center;
+}
+
+
+nav .mainmenu>li>a {
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: 0 24px;
+    line-height: 35px;
+    border-right: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+nav .mainmenu>li>a:last-child {
+    border-right: 0;
+}
+
+
+nav .mainmenu>li:hover>a,
+.mainmenu>li .sub li:hover a {
+
+    color: rgb(123, 78, 207);
+}
+
+nav .mainmenu>li .sub {
+    position: relative;
+    display: none;
+}
+
+
+
+nav .mainmenu>li .sub li {
+    width: inherit;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+}
+
+nav .mainmenu>li .sub li a {
+    font-size: 13px;
+}
+
+/* ------------------------section 1-------------------------- */
+#sec1 {
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+
+#sec1 .sec1_title {
+    width: 250px;
+    height: 100%;
+    position: relative;
+}
+
+#sec1 .sec1_title h4 {
+    font-weight: bolder;
+}
+
+#sec1 .sec1_title p {
+    position: absolute;
+    bottom: 10px;
+}
+
+#sec1 div {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#sec1 .purple:hover {
+    border: 2px solid rgb(123, 78, 207);
+}
+
+
+#sec1 div .faintbar {
+    display: inline-block;
+    width: 40px;
+    border: 1px solid lightgray;
+    margin: 20px 0;
+}
+
+#sec1 div p:last-child {
+    font-size: 14px;
+}
+
+#sec1 div img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#sec1 div .bigletter {
+
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+#sec1 div:nth-child(2),
+#sec1 div:nth-child(3),
+#sec1 div:nth-child(4),
+#sec1 div:nth-child(5) {
+    width: calc((100% - 250px) / 4);
+    height: 100%;
+    text-align: center;
+
+}
+
+/* ----------section 2---------- */
+#sec2 {
+
+    height: 170px;
+    margin-bottom: 30px;
+}
+
+#sec2 div {
+    width: calc((100% - 10px) / 3);
+    float: left;
+    margin-right: 5px;
+    height: 170px;
+    overflow: hidden;
+}
+
+#sec2 div:last-child {
+    margin-right: 0;
+}
+
+#sec2 div img {
+    width: 100%;
+}
+
+
+/* -------section 3------- */
+#sec3 {
+    margin-bottom: 30px;
+}
+
+
+/* -------section 4------- */
+#sec4 {
+    margin-bottom: 10px;
+    height: 360px;
+}
+
+#sec4 div:first-child {
+    width: 607px;
+    margin-right: 10px;
+    height: 100%;
+    float: left;
+
+    overflow-y: scroll;
+}
+
+#sec4 div:first-child img {
+    width: 100%;
+}
+
+#sec4 div:first-child ul {
+    font-size: 12px;
+}
+
+#sec4 div:first-child ul li {
+    padding: 5px 0;
+}
+
+#sec4 div:last-child {
+    height: 360px;
+    width: calc(100% - 617px);
+    background-color: peachpuff;
+    float: left;
+}
+
+/* -------section 5------- */
+#sec5 {
+    height: 432px;
+    margin-bottom: 30px;
+}
+
+#sec5 div {
+    width: calc(100% / 3);
+    float: left;
+
+}
+
+
+#sec5 div img {
+    width: 100%;
+}
+
+/* -------section 6------- */
+
+#sec6 {
+    position: relative;
+
+}
+
+#sec6>p {
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    color: rgb(160, 157, 157);
+}
+
+#sec6 .frame {
+    width: 100%;
+    height: 595px;
+    margin-bottom: 30px;
+
+}
+
+#sec6 .position {
+    position: relative;
+}
+
+#sec6 .position .icons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#sec6 .icons .righticon {
+    float: right;
+    padding: 13px 0;
+}
+
+#sec6 .icons .righticon img {
+    display: block;
+    float: left;
+}
+
+#sec6 .icons .righticon p {
+    float: left;
+    color: white;
+    padding-left: 3px;
+}
+
+#sec6 .icons .point {
+    display: block;
+    float: left;
+}
+
+
+/* --control left-- */
+
+#sec6 .frame .frameleft {
+    width: calc((100% - 5px) / 2);
+    margin-right: 5px;
+    float: left;
+}
+
+#sec6 .frame .frameleft .lefttop {
+    width: 100%;
+    height: 395px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+#sec6 .frame .frameleft .lefttop .lefttop_left {
+    width: calc((100% - 5px) / 2);
+    height: 395px;
+    float: left;
+    margin-right: 5px;
+    /* position: relative; */
+}
+
+
+
+#sec6 .frame .frameleft .lefttop .lefttop_left div .pic {
+    width: 100%;
+}
+
+#sec6 .frame .frameleft .lefttop .lefttop_right {
+    width: calc((100% - 5px) / 2);
+    float: left;
+}
+
+#sec6 .frame .frameleft .lefttop .lefttop_right .position {
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+}
+
+
+
+#sec6 .frame .frameleft .lefttop .lefttop_right div:first-child {
+    margin-bottom: 5px;
+}
+
+#sec6 .frame .frameleft .lefttop .lefttop_right div .pic {
+    width: 100%;
+}
+
+#sec6 .frame .frameleft .leftbottom {
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+}
+
+#sec6 .frame .frameleft .leftbottom .pic {
+    height: 100%;
+    width: 100%;
+}
+
+#sec6 .frame .frameleft .leftbottom .icons p {
+    color: rgb(78, 36, 12);
+
+}
+
+#sec6 .frame .frameleft .leftbottom .lefticon {
+    float: left;
+    margin-right: 30px;
+
+}
+
+#sec6 .frame .frameleft .leftbottom .lefticon p {
+    float: left;
+    padding: 3px 2px;
+}
+
+#sec6 .frame .frameleft .leftbottom .lefticon img {
+    display: block;
+    float: left;
+}
+
+#sec6 .frame .frameleft .leftbottom>img {
+    display: block;
+    float: left;
+
+}
+
+/* #sec6 .frame .digit4{
+  left: 145px;
+} */
+/* --control right-- */
+#sec6 .frame .frameright {
+    width: calc((100% - 5px) / 2);
+    float: left;
+}
+
+
+#sec6 .frame .frameright .righttop {
+    width: 100%;
+    margin-bottom: 5px;
+    height: 195px;
+}
+
+#sec6 .frame .frameright .righttop .position {
+    width: calc((100% - 5px) / 2);
+    height: 100%;
+    overflow: hidden;
+}
+
+#sec6 .frame .frameright .righttop .icons {
+    width: 100%;
+}
+
+#sec6 .frame .frameright .righttop>div:first-child {
+    float: left;
+    margin-right: 5px;
+}
+
+#sec6 .frame .frameright .righttop>div:last-child {
+    float: left;
+}
+
+#sec6 .frame .frameright .righttop>div .pic {
+    width: 100%;
+}
+
+#sec6 .frame .frameright .rightbottom {
+    width: 100%;
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_left {
+    width: calc((100% - 5px) / 2);
+    height: 395px;
+    margin-right: 5px;
+    float: left;
+
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_left>div {
+    width: 100%;
+
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_left>div .pic {
+    width: 296.5px;
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_left>div:first-child {
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_left .position {
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_left>div:last-child .pic {
+    width: 100%;
+
+
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_right {
+    width: calc((100% - 5px) / 2);
+    height: 395px;
+
+    float: left;
+    overflow: hidden;
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_right>div {
+    width: 100%;
+
+}
+
+#sec6 .frame .frameright .rightbottom .rightbottom_right>div .pic {
+    width: 100%;
+}
+
+#sec6 h2,
+#sec7 h2 {
+    color: #3d3c3c;
+    margin-bottom: 15px;
+}
+
+/* -------section 7------- */
+#sec7 {
+    position: relative;
+}
+
+#sec7>p {
+    color: rgb(160, 157, 157);
+    position: absolute;
+    top: 20px;
+    left: 190px;
+}
+
+#sec7 .sec7_banner {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#sec7 .sec7_banner img {
+    width: 100%;
+}
+
+#sec7 article {
+    width: 100%;
+
+}
+
+#sec7 article::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+
+
+
+#sec7 article .sec7_cont {
+    height: 320px;
+    float: left;
+    margin: 0 5px;
+    width: calc((100% - 40px) / 4);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#sec7 article .sec7_cont>div {
+    display: inline-block;
+    margin: 5px;
+}
+
+#sec7 article .sec7_cont p {
+    text-align: left;
+}
+
+#sec7 .more,
+#sec7 .hide {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid rgb(236, 235, 235);
+
+}
+
+#sec7 .hiddencont {
+    display: none;
+}
+
+#sec7 .more:hover,
+#sec7 .hide:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* #sec7 .more a,
+#sec7 .hide a {
+    display: block;
+} */
+
+#sec7 .hide {
+    display: none;
+}
+
+/* -------section 8------- */
+
+
+/* -------section 9------- */
+#sec9 {
+    margin-bottom: 50px;
+}
+
+#sec9 article {
+    float: left;
+    overflow-y: scroll;
+    font-size: 13px;
+
+}
+
+#sec9 article ul {
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+#sec9 article ul li {
+    padding: 5px 0;
+}
+
+#sec9 article:first-child {
+    width: 490px;
+    height: 433px;
+    overflow: hidden;
+}
+
+#sec9 article:first-child img {
+    width: 100%;
+}
+
+#sec9 article:nth-child(2),
+#sec9 article:nth-child(3) {
+    width: calc((100% - 490px) / 2);
+
+    height: 433px;
+}
+
+#sec9 article:nth-child(2) #sec9 article:nth-child(2) div,
+#sec9 article:nth-child(3) div,
+#sec9 article:nth-child(2) div img,
+#sec9 article:nth-child(3) div img {
+    width: 100%;
+}
+
+
+
+#sec9::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+/* -------section 10------- */
+#sec10 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#sec10 img {
+    width: 100%;
+}
+
+/*********************footer****************************/
+
+footer {
+    height: 180px;
+}
+
+footer .footer_1,
+footer .footer_2 {
+    float: left;
+}
+
+footer .footer_2 {
+    font-size: 14px;
+}
+
+footer .footer_2 ul li {
+    float: left;
+    padding-right: 15px;
+    margin-bottom: 20px;
+
+}
+
+footer .footer_2 ul li a {
+    font-size: 16px;
+}
+
+footer .footer_3 ul li:hover a,
+footer .footer_2 ul li:hover a {
+    font-weight: bold;
+}
+
+footer .footer_2 ul::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+footer .footer_3 {
+    float: right;
+}
+
+footer .footer_3 ul::after {
+
+    clear: both;
+    content: '';
+    display: block;
+}
+
+footer .footer_3 ul {
+    width: 454px;
+    margin-bottom: 10px;
+}
+
+footer .footer_3 ul li {
+    width: calc(454px / 3);
+    text-align: center;
+    float: left;
+    line-height: 35px;
+}
+
+/* ------------popup------------- */
+#popup1 {
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+#popup1 .pop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 30;
+}
+
+#popup1 .pop img {
+    width: 100%;
+}
+
+#popup1 .x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 40;
+}
+
+#popup1 .x img {
+    display: block;
+}
+
+/* ----------quick---------- */
+#quick {
+    position: fixed;
+    right: 0;
+    top: 60%;
+    transition: all 1s;
+    transform: translateY(-50%);
+    width: 110px;
+    z-index: 20;
+}
